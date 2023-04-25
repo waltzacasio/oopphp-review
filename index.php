@@ -1,5 +1,6 @@
 <?php
-include "includes/persons.inc.php";
+declare(strict_types =1);
+    include "includes/autoloader.inc.php";
 ?>
 
 
@@ -11,8 +12,18 @@ include "includes/persons.inc.php";
 <body>
 
     <?php
-        $person1 = new Person("Walter", "Orange", 28);
-        echo $person1->getName();
+        $person1 = new Person();
+
+        try {
+            $person1->setName(2);
+            echo $person1->getName(); 
+        }   catch (TypeError $e) {
+            echo "Error!: " . $e->getMessage();
+        }
+
+
+        
+        
 
 
    ?>
