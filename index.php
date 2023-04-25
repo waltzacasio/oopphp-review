@@ -11,14 +11,11 @@ include "includes/persons.inc.php";
 <body>
 
     <?php
-        $person1 = new Person();
-        $person1->setName("Daniel");
-        echo $person1->name;
+        $person1 = new Person("Walter", "Orange", 28);
+        echo $person1->getName();
 
-        $person2 = new Person();
-        $person2->setName("Timmy");
-        echo $person2->name;
-    ?>
+
+   ?>
     
 </body>
 </html>
